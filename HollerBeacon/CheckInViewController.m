@@ -25,10 +25,17 @@
 {
     [super viewDidLoad];
 	[self initBeacon];
-    [self transmitBeacon];
     
-    self.welcomeLabel.text = [NSString stringWithFormat:@"Welcome %@!", self.attendee[sParseClassAttendeeKeyFirstName]];
+    self.welcomeLabel.text = [NSString stringWithFormat:@"Hello %@! Welcome to the Largest Hackathon on Earth! #LaunchHack", self.attendee[sParseClassAttendeeKeyFirstName]];
 }
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self transmitBeacon];
+}
+
+#pragma mark - iBeacon
 
 - (void)initBeacon {
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:HOLLER_BEACON_UUID];
@@ -49,7 +56,9 @@
 -(void)peripheralManagerDidUpdateState:(CBPeripheralManager *)peripheral
 {
     if (peripheral.state == CBPeripheralManagerStatePoweredOn) {
-        [self.peripheralManager startAdvertising:self.beaconPeripheralData];
+        if (![self.peripheralManager isAdvertising]) {
+            [self.peripheralManager startAdvertising:self.beaconPeripheralData];
+        }
     } else if (peripheral.state == CBPeripheralManagerStatePoweredOff) {
         [self.peripheralManager stopAdvertising];
     }

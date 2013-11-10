@@ -22,7 +22,7 @@
 		9C50E108182EF7ED000445F8 /* HollerBeaconTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C50E107182EF7ED000445F8 /* HollerBeaconTests.m */; };
 		9C50E112182EF849000445F8 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C50E111182EF849000445F8 /* CoreBluetooth.framework */; };
 		9C50E114182EF850000445F8 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C50E113182EF850000445F8 /* CoreLocation.framework */; };
-		9C50E117182EF9C0000445F8 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C50E116182EF9C0000445F8 /* RegistrationViewController.m */; };
+		9C50E117182EF9C0000445F8 /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C50E116182EF9C0000445F8 /* SignInViewController.m */; };
 		9C50E11B182EFB02000445F8 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C50E11A182EFB02000445F8 /* Parse.framework */; };
 		9C50E11D182EFB15000445F8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C50E11C182EFB15000445F8 /* AudioToolbox.framework */; };
 		9C50E11F182EFB2A000445F8 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C50E11E182EFB2A000445F8 /* CFNetwork.framework */; };
@@ -65,8 +65,8 @@
 		9C50E107182EF7ED000445F8 /* HollerBeaconTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HollerBeaconTests.m; sourceTree = "<group>"; };
 		9C50E111182EF849000445F8 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		9C50E113182EF850000445F8 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		9C50E115182EF9C0000445F8 /* RegistrationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
-		9C50E116182EF9C0000445F8 /* RegistrationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		9C50E115182EF9C0000445F8 /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewController.h; sourceTree = "<group>"; };
+		9C50E116182EF9C0000445F8 /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewController.m; sourceTree = "<group>"; };
 		9C50E119182EFAA2000445F8 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9C50E11A182EFB02000445F8 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9C50E11C182EFB15000445F8 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -203,8 +203,8 @@
 		9C50E118182EF9C8000445F8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9C50E115182EF9C0000445F8 /* RegistrationViewController.h */,
-				9C50E116182EF9C0000445F8 /* RegistrationViewController.m */,
+				9C50E115182EF9C0000445F8 /* SignInViewController.h */,
+				9C50E116182EF9C0000445F8 /* SignInViewController.m */,
 				9C50E12C182EFEE9000445F8 /* CheckInViewController.h */,
 				9C50E12D182EFEE9000445F8 /* CheckInViewController.m */,
 			);
@@ -309,7 +309,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C50E0ED182EF7ED000445F8 /* AppDelegate.m in Sources */,
-				9C50E117182EF9C0000445F8 /* RegistrationViewController.m in Sources */,
+				9C50E117182EF9C0000445F8 /* SignInViewController.m in Sources */,
 				9C50E12E182EFEE9000445F8 /* CheckInViewController.m in Sources */,
 				9C50E0E9182EF7ED000445F8 /* main.m in Sources */,
 			);
