@@ -9,7 +9,7 @@
 
 #pragma mark - iBeacon UUID
 
-static NSString * const HOLLER_BEACON_UUID                  = @"6DAD8814-26C5-4523-AFC9-48E7F0C0FC38";
+static NSString * const HOLLER_BEACON_IDENTIFIER            = @"com.holler.event"; // Add Attendees Email Address
 
 #pragma mark - Parse Setup Keys
 
@@ -27,4 +27,4 @@ static NSString * const sParseClassAttendeeKeyLastName      = @"lastName";
 static NSString * const sParseClassAttendeeKeyCompany       = @"company";
 static NSString * const sParseClassAttendeeKeyEmail         = @"email";
 static NSString * const sParseClassAttendeeKeyCheckedIn     = @"checkedIn";
-static NSString * const sParseClassAttendeeKeyUUID          = @"uuid";
+static NSString * const sParseClassAttendeeKeyUUID          = @"attendeeUUID";

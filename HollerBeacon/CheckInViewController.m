@@ -38,11 +38,13 @@
 #pragma mark - iBeacon
 
 - (void)initBeacon {
-    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:HOLLER_BEACON_UUID];
+    if (!self.attendee[sParseClassAttendeeKeyUUID]) {
+        self.attendee[sParseClassAttendeeKeyUUID] = [[NSUUID UUID] UUIDString];
+        [self.attendee saveInBackground];
+    }
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:self.attendee[sParseClassAttendeeKeyUUID]];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
-                                                                major:1
-                                                                minor:1
-                                                           identifier:self.attendee.objectId];
+                                                           identifier:[NSString stringWithFormat:@"%@.%@", HOLLER_BEACON_IDENTIFIER, self.attendee[sParseClassAttendeeKeyEmail]]];
 }
 
 - (void)transmitBeacon
