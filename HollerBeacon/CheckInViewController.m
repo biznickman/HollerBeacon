@@ -31,7 +31,7 @@
 }
 
 - (void)initBeacon {
-    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:PARSE_APPLICATION_ID];
+    NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:HOLLER_BEACON_UUID];
     self.beaconRegion = [[CLBeaconRegion alloc] initWithProximityUUID:uuid
                                                                 major:1
                                                                 minor:1

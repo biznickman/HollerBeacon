@@ -7,6 +7,10 @@
 //
 
 
+#pragma mark - iBeacon UUID
+
+static NSString * const HOLLER_BEACON_UUID                  = @"6DAD8814-26C5-4523-AFC9-48E7F0C0FC38";
+
 #pragma mark - Parse Setup Keys
 
 static NSString * const PARSE_APPLICATION_ID                = @"KiJUo0YsOa0i3HZcAqmexghkikkbGmJJvUOXdpQL";
